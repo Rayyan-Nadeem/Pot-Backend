@@ -1,0 +1,25 @@
+{
+  "name": "pot-backend",
+  "version": "1.0.0",
+  "description": "Node.js backend that connects a frontend and an Arduino Uno via MQTT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "echo 'No build step required for this project'",
+    "prebuild": "echo 'Running prebuild tasks'",
+    "test": "echo 'No test specified' && exit 0"
+  },
+  "keywords": [],
+  "author": "Rayyan Nadeem & Dennis Cheng",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.20.0",
+    "mqtt": "^5.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
