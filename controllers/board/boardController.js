@@ -16,7 +16,13 @@ exports.sendCommand = (req, res) => {
     res.send('Command sent');
 };
 
+
+/* Get the last 5 messages assumes data is in memory
+with the following structure:
+const messages = [
+*/
+
 exports.getLastMessages = (req, res) => {
-    const lastFiveMessages = messages.slice(-5); // Get the last 5 messages
+    const lastFiveMessages = messages.slice(-5);
     res.json(lastFiveMessages);
 };
