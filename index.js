@@ -1,5 +1,5 @@
 const express = require('express');
-require('dotenv').config();
+require('dotenv').config();  // Load .env file
 const bodyParser = require('body-parser');
 const boardRoutes = require('./routes/board/boardRoutes');
 
