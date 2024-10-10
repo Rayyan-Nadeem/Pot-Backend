@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const boardController = require('../../controllers/board/boardController');
 
-// Define your routes
-router.post('/hello', boardController.hello);
-router.post('/command', boardController.sendCommand);
-router.get('/last-five-messages', boardController.getLastMessages);
+// Define a GET endpoint to get board data
+router.get('/', boardController.getBoardData);
+
+// Define a POST endpoint to blink the LED
+router.post('/blink', boardController.blinkLED);
 
 module.exports = router;

@@ -1,28 +1,16 @@
-// Example in-memory storage for demonstration purposes
-let messages = [
-  { id: 1, text: 'Message 1' },
-  { id: 2, text: 'Message 2' },
-  { id: 3, text: 'Message 3' },
-  { id: 4, text: 'Message 4' },
-  { id: 5, text: 'Message 5' },
-  { id: 6, text: 'Message 6' }
-];
-
-exports.hello = (req, res) => {
-    res.send('Hello from the board controller');
+// Controller to fetch a custom message ("hello") in the body
+exports.getBoardData = (req, res) => {
+    res.status(200).json({ message: 'hello' });
 };
 
-exports.sendCommand = (req, res) => {
-    res.send('Command sent');
-};
+// Controller to trigger LED blink by handling HTTP POST requests
+exports.blinkLED = (req, res) => {
+    // Simulate an LED blink action
+    console.log('Blink command received from client');
+    
+    // Simulate the action: Print to console
+    console.log('Blinking LED 3 times');
 
-
-/* Get the last 5 messages assumes data is in memory
-with the following structure:
-const messages = [
-*/
-
-exports.getLastMessages = (req, res) => {
-    const lastFiveMessages = messages.slice(-5);
-    res.json(lastFiveMessages);
+    // Respond to the client
+    res.status(200).json({ message: 'LED will blink 3 times' });
 };

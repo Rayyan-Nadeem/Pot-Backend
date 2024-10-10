@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const boardRoutes = require('./routes/board/boardRoutes');
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
